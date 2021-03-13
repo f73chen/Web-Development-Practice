@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- headers can contain nav or other content; before the main content of the site -->
+    <header>
+        <!-- nav is for navigational content that appears on every page. Doesn't have to be at the top -->
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="http://www.google.com">Google</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main is a semantic that indicates this content is not repeated on other pages -->
+    <main>
+        <h1>Home Page</h1>
+        <p>This is a link to the <a href="about.html">about</a> page</p>
+        <p>This is a second link to <a href="http://www.google.com">Google</a></p>
+        <!-- images may be grouped with a caption in a figure element -->
+        <figure>
+            <img src="screenshot.PNG" alt="A screenshot I took of the course">
+        </figure>
+        <!-- div groups content together and styles it all at once -->
+        <!-- a section is like a div, but more specific -->
+        <!-- span also groups elements, but selects items rather than put them in the same block. e.g. styles text red -->
+        <section>
+            <div>
+                <a href=""><span class="order">first</span> block of text</a>
+                <a href=""><span class="order">second</span> block of text</a>
+            </div>
+            <!-- hr makes a horizontal line across the page. Can be styled -->
+            <hr>
+            <a href=""><span class="order">third</span> block of text</a>
+            <a href=""><span class="order">fourth</span> block of text</a>
+        </section>
+        <!-- br breaks text to a new line, e.g. poems, but still grouped together in a paragraph -->
+        <!-- an article is a self-contained composition that is independently distributable or reusable, e.g. blog entry-->
+        <!-- can have sub-articles inside articles -->
+        <article>
+            <p>this is a paragraph of text.<br> Feel free to test new things here. For example, a<sup>2</sup> +
+                b<sup>2</sup> = c<sup>2</sup> and H<sub>2</sub>O<br>
+                If you need to use "less than", do: &lt;, because &lt; and &gt; are reserved characters.<br>
+                not that &amp; itself is a reserved character too.</p>
+        </article>
+        <!-- asides are content tangentially related to the main content. Usually put on a sidebar -->
+        <aside>
+            <p>this is an aside</p>
+        </aside>
+    </main>
+    <!-- similar to headers, footers contain everything after the main article -->
+    <!-- headers and footers can be inside other elements, like an article -->
+    <footer>
+        <p>this is the footer</p>
+    </footer>
+</body>
+
+</html>
