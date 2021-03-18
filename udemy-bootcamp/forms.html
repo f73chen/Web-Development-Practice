@@ -96,17 +96,31 @@
         </p>
         <!-- slider selection: default goes from 0 to 100 -->
         <!-- can also change range for "number" input type -->
+        <!-- min & max: numeric value requirements (date, time, number, range) -->
         <p>
             <label for="cheese">Amount of cheese</label>
-            <input id = "cheese" name = "amount_of_cheese" type="range" min = "10" max = "20" step = 2 value = "18">
+            <input id="cheese" name="amount_of_cheese" type="range" min="10" max="20" step=2 value="18">
         </p>
         <!-- use textarea for long-form inputs -->
         <!-- rows and cols are just the initial dimensions -->
         <!-- destination link: &story=It+was+a+dark+and+stormy+night... -->
         <p>
-            <label for = "story">What's your story?</label>
+            <label for="story">What's your story?</label>
             <br>
-            <textarea id = "story" name = "story" rows = "5" cols = "30" placeholder = "type something here"></textarea>
+            <textarea id="story" name="story" rows="5" cols="30" placeholder="type something here" required></textarea>
+        </p>
+        <!-- required: when submitting form, required fields must have content -->
+        <!-- minlength & maxlength: character count requirements -->
+        <!-- can use 'pattern' to match regex patterns -->
+        <p>
+            <label for="firstname">First Name</label>
+            <input id="firstname" name="firstname" type="text" minlength="5" maxlength="20">
+        </p>
+        <!-- some types (email, url, etc.) have default validation (must include '@'; '_://') -->
+        <p>
+            <label for="emailadd">Email Address</label>
+            <input id="emailadd" name="emailadd" type="email" required>
+            <input id="url" name="url" type="url" required>
         </p>
         <button type="submit">Submit Form</button>
     </form>

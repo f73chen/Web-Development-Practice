@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Race Registration!</h1>
+    <p>
+        <form action = "/register/">
+            <p>
+                <label for = "firstname">First Name</label>
+                <input id = "firstname" type = "text" name = "firstname" required>
+                <label for = "lastname">Last Name</label>
+                <input id = "lastname" type = "text" name = "lastname" required>
+            </p>
+            <p>
+                Select a Race:
+            </p>
+            <p>
+                <input id = "race_5k" type = "radio" name = "race" value = "5k">
+                <label for = "race_5k">Fun Run 5k</label><br>
+                <input id = "race_half" type = "radio" name = "race" value = "half">
+                <label for = "race_half">Half Marathon</label><br>
+                <input id = "race_full" type = "radio" name = "race" value = "full">
+                <label for = "race_full">Full Marathon</label>
+            </p>
+            <p>
+                <label for = "email">Email</label>
+                <input id = "email" type = "email" name = "email" required>
+                <label for = "password">Password</label>
+                <input id = "password" type = "password" name = "password" required>
+            </p>
+            <p>
+                <label for = "age_group">Select Age Group</label>
+                <select id = "age_group" name = "age">
+                    <option value = "none" selected>--Select--</option>
+                    <option value = "under 18">under 18</option>
+                    <option value = "18-30">18-30</option>
+                    <option value = "30+">30+</option>
+                </select>
+            </p>
+            <button type = "submit">Register!</button>
+        </form>
+    </p>
+</body>
+</html>
