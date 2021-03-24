@@ -1,0 +1,32 @@
+/* Doesn't align to the whole page, only the element it's inside of */
+/* font-weight --> boldness or lightness of a piece of text */
+/* text-decoration --> appearance of decorations on text (location, colour, style, thickness) */   
+    /* Can be used to remove decorations (ex. underlined links) */
+/* line-height --> line spacing */
+/* letter-spacing --> spacing between letters */
+/* font-size --> font size */
+/* font-family --> category of/a specific named font(s) */
+    /* Choose alternatives to fall back on when the first choice isn't available/installed */
+
+h1 {
+    text-align: center;
+    text-decoration: blue overline dotted;
+    letter-spacing: 20px;
+    font-size: 50px;
+}
+
+h3 {
+    text-align: right;
+    width: 30%;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-weight: 700;
+    line-height: 2.5;
+    font-family: Futura, Calibri, Helvetica;
+}

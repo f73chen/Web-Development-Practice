@@ -1,0 +1,12 @@
+/* color --> text colour */
+/* background-color --> background colour */
+
+h1 {
+    color: darkgray;
+    background-color: rgb(255, 0, 80);
+}
+
+button {
+    color: #abcdef;
+    background-color: aquamarine;
+}
