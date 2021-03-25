@@ -1,0 +1,116 @@
+/* universal selector --> '*' */
+* {
+    color: pink;
+    background-color: green;
+}
+
+/* element selector --> 'img'; 'h1' */
+button {
+    background-color: grey;
+}
+
+/* selector list --> 'h1, h2' selects both h1 and h2 */
+h1, p {
+    font-size: 20px;
+    color: darkblue;
+}
+
+/* ID selector*/
+/* note: IDs should be unique */
+#submit {
+    background-color: orange;
+}
+
+/* class selector */
+/* or element.class */
+.firsts {
+    color: chocolate;
+}
+
+/* descendant selector --> all element x nested inside element y */
+/* can combine, ex. every button inside class "post" */
+h3 span {
+    color: cyan;
+}
+
+/* direct descendent --> not all nested within, just 1 level down */
+form > button {
+    background-color: yellow;
+}
+
+/* adjacent selector --> a + b: select only element b's that follow a */
+h3 + p {
+    background-color: white;
+}
+
+/* attribute selector --> ID, type, name, class, href etc. */
+/* href '=': matching; '*=': containing; '$=': ending in etc. */
+input[type = "password"] {
+    background-color: crimson;
+}
+
+a[href$=".com"] {
+    color: purple;
+}
+
+/* pseudo-classes --> keyword added to selector that specifies a special state of the selected elements */
+/* ex. :active, :checked, :hover, :first, :not(), nth-of-type(), :nth-child() */
+/* combine: ex. hover with class "hovering" */
+a:hover {
+    color: yellow;
+    background-color: blue;
+}
+
+button.hovering:hover {
+    color: yellow;
+    background-color: blue;
+}
+
+p:nth-of-type(2n) {
+    background-color: orangered;
+}
+
+/* pseudo-elements --> keyword to select a particular part of selected element(s) */
+/* ex. ::after, ::before, ::first-letter, :: first-line, ::selection */
+h3::first-letter {
+    font-size: 50px;
+}
+
+p::selection {
+    background-color: aqua;
+}
+
+/* cascade --> styles at the bottom override styles at the top */
+
+/* specificity --> the more specific selection overrides, but only for conflicting attributes */
+    /* specificity point calculation: ID >> class >> element */
+button.hovering:hover {
+    color: yellow;
+    background-color: blue;
+}
+
+button:hover {
+    color: yellow;
+    background-color: white;
+    font-size: 30px;
+}
+
+/* inline styles --> style="" at the declaration of the element overrides css */
+    /* avoid because separate from actual style sheet, could lead to confusion */
+
+    /* !important --> signals to browser that this is the most important style */
+    /* bad practice because breaks the cascade */
+    /* button {
+        background-color: orange !important;
+    } */
+
+/* inheritance --> all nested elements share the top-level style unless specified otherwise */
+    /* not every element inherits every property, so can specify inheritance explicitly */
+    /* some properties are not inheritable */
+body {
+    background-color: black;
+}
+
+button:nth-of-type(3) {
+    background-color: inherit;
+}
