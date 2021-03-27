@@ -1,0 +1,42 @@
+/* background-image */
+/* background-size */
+    /* contain --> scale as large as possible without cropping or stretching */
+    /* cover --> scale as large as possible without stretching. Crop out whitespace */
+    /* auto --> scale so its intrinsic proportions are maintained */
+/* background-position: where the background starts */
+body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: center/30% url(https://coolors.co/assets/img/logo.svg) no-repeat;
+    background-color: #151b29;
+}
+
+button {
+    background-color: #151b29;
+    border: 1px solid;
+    color: orange;
+    padding: 1em 2em;
+    transition: 0.1s;
+}
+
+button:hover {
+    border: 1px solid;
+    border-color: gold;
+    color: white;
+    transform: translateY(-0.5em);
+    box-shadow: 0 0.5em 0.5em -0.4em gold;
+    cursor: pointer;
+}
+
+/* section {
+    width: 80%;
+    height: 800px;
+    background-image: url(https://coolors.co/assets/img/logo.svg);
+    background-size: 30%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: center/30% url(https://coolors.co/assets/img/logo.svg) no-repeat;
+} */

@@ -1,0 +1,56 @@
+section h1 {
+    border: 2px black solid;
+    width: 300px;
+    padding: 0.5em;
+    text-align: center;
+    margin: 10px auto;
+    color: #eae2b7;
+    font-size: 1.8em;
+    font-family: Courier New;
+    font-weight: lighter;
+}
+
+section h1:nth-child(1) {
+    background-color: #f72585;
+}
+
+section h1:nth-child(2) {
+    background-color: #b5179e;
+}
+
+section h1:nth-child(3) {
+    background-color: #7209b7;
+}
+
+section h1:nth-child(4) {
+    background-color: #560bad;
+}
+
+/* transform */
+    /* transforms all emements inside the box (all divs in section; all buttons in div) */
+    /* rotate --> rotate by degrees, radians, turns etc. Default origin is center */
+    /* transform-origin --> point that stays fixed when transforming (ex. rotate) */
+    /* rotateX() --> rotates around horizontal axis */
+    /* scale() --> resizes x and y axes */
+    /* translate() --> moves element around */
+    /* skew() --> skew on 2D plane according to angles */
+#section1 h1:nth-child(1){
+    transform-origin: top left;
+    transform: rotate(45deg);
+}
+
+#section1 h1:nth-child(2){
+    transform: scale(2, 0.5);
+}
+
+#section1 h1:nth-child(3){
+    transform: translateX(100px) translateY(100px);
+}
+
+#section1 h1:nth-child(4){
+    transform: skew(-0.5turn, -0.5rad)
+}
+
+#section2 {
+    transform:scale(0.5) translate(200px);
+}

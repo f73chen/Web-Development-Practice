@@ -1,0 +1,139 @@
+/* rgba --> alpha between 0-1, controls opacity */
+    /* Note: only affects the background colour */
+    /* in hexadecimal, add 00 > FF at the end */
+#section1 {
+    width: 500px;
+    height: 500px;
+    background-color: #480ca8;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* opacity --> governs the transparency of the entire element (including text) */
+#opacity {
+    width: 50%;
+    height: 50%;
+    background-color: yellow;
+    opacity: 0.3;
+}
+
+/* position */
+    /* static --> can't be moved */
+    /* relative --> moves relative to its original position */
+    /* absolute --> element removed from normal document flow and no space is created for it in the layout */
+        /* if parent is positioned (ex. section pos is relative), then absolute relative to parent */
+    /* fixed --> relative to the initial containing block (scrolls with document) */
+    /* sticky --> fixed until scroll past, then become fixed */
+#static div {
+    width: 150px;
+    height: 150px;
+    border: 3px black solid;
+    display: inline-block;
+    margin: 20px;
+    background-color: #006d77;
+}
+
+#static #special1 {
+    background-color: #83c5be;
+    position: static;
+    top: 100px;
+}
+
+#relative div {
+    width: 150px;
+    height: 150px;
+    border: 3px black solid;
+    display: inline-block;
+    margin: 20px;
+    background-color: #006d77;
+}
+
+#relative #special2 {
+    background-color: #83c5be;
+    position: relative;
+    top: 100px;
+}
+
+#absolute {
+    position: relative;
+}
+
+#absolute div {
+    width: 150px;
+    height: 150px;
+    border: 3px black solid;
+    display: inline-block;
+    margin: 20px;
+    background-color: #006d77;
+}
+
+#absolute #special3 {
+    background-color: #83c5be;
+    position: absolute;
+    top: 50px;
+    left: 250px;
+}
+
+#fixed div {
+    width: 150px;
+    height: 150px;
+    border: 3px black solid;
+    display: inline-block;
+    margin: 20px;
+    background-color: #006d77;
+}
+
+#fixed #special4 {
+    background-color: #83c5be;
+    position: fixed;
+    top: 50px;
+    left: 250px;
+}
+
+/* transitions --> switch styles more gradually */
+    /* <property name | duration | timing function | delay> */
+    /* timing function --> take the same time from beginning to end, but speed changes at different points */
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: magenta;
+    transition: border-radius 1s steps(6, end) 1s;
+}
+
+.circle:hover {
+    background-color: cyan;
+    border-radius: 50%;
+}
+
+#nonlinear div {
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    border: 2px black solid;
+    margin: 10px;
+    transition: margin-left 3s;
+}
+
+#nonlinear:hover div {
+    margin-left: 500px;
+}
+
+#nonlinear div:nth-of-type(1) {
+    transition-timing-function: ease-in;
+}
+
+#nonlinear div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+
+#nonlinear div:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#nonlinear div:nth-of-type(4) {
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
