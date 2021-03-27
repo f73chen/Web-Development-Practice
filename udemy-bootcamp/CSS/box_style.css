@@ -1,0 +1,115 @@
+/* width & height --> size of the content within the box */
+div {
+    width: 500px;
+}
+
+/* margin --> space between the box element and something else */
+/* same syntax as padding */
+/* display--> change whether elements are block or inline etc. */
+    /* inline --> width and height are ignored. Margin & padding push horizontally but not vertically */
+    /* block --> break the flow of a document. Width, height, margin, and padding are all respected */
+    /* inline-block --> behaves like an inline element except width, height, margin, and padding are respected */
+    /* none --> element is there but doesn't take up any space. Useful for javascript */
+h1 {
+    background-color: lightyellow;
+    width: 400px;
+    margin-bottom: 0;
+    border: 1px black solid;
+    display: inline;
+}
+
+span {
+    border: 1px #003049 solid;
+    display: block;
+}
+
+/* border doesn't show until set all of width, colour, and style */
+/* box-sizing --> take border size into account when sizing content box */
+#one {
+    background-color: #e8e8e4;
+    border-width: 5px;
+    border-color: #b7b7a4;
+    border-style: solid;
+    box-sizing: border-box;
+    margin-left: 50px;
+}
+
+/* can set different styles and colours for each side */
+#two {
+    background-color: #f8edeb;
+    border-width: 6px;
+    border-color: #a5a58d;
+    border-style: dashed groove inset dotted;
+    border-left-color: #264653;
+    border-bottom-width: 10px;
+    margin: 30px 0;
+}
+
+/* border shorthand: <width | style | color> */
+#three {
+    background-color: #fae1dd;
+    border: 4px dotted #bc6c25;
+    border-radius: 5% 50% 5% 50%;
+}
+
+/* padding shorthand: <all>; <vertical | horizontal>; <top | horizontal | bottom>; <top | right | bottom | left> */
+#four {
+    background-color: #fcd5ce;
+    padding: 20px 30px 0 0;
+    padding-left: 30px;
+}
+
+/* inline text doesn't change width */
+/* padding displays but doesn't push other text away */
+/* margin only respected on the line the span is in */
+.inText {
+    display: inline;
+    background-color: #e76f51;
+    border: 1px black solid;
+    width: 500px;
+    padding: 5px;
+    margin: 50px;
+}
+
+/* inline-block display shares a row, but respects sizing */
+.test {
+    background-color: olivedrab;
+    border: 5px black solid;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    display: inline-block;
+}
+
+/* Units */
+    /* percentage */
+        /* width 50% --> half the width of the parent */
+        /* line-height 50% --> half the font size of the element itself */
+    /* em */
+        /* 1em = font size of the parent; 2em = double the font size of the parent; etc. */
+        /* for other properties, 1em = the computed font size of the element itself */
+        /* however, each nested element stacks another layer of styling */
+    /* rem */
+        /* relative to the root html element's font-size */
+        /* if root font size is 20px, 2rem is always 40px */
+#title3 {
+    font-size: 40px;
+    border: 1px black solid;
+    line-height: 300%;
+    margin-left: 1em;
+    padding: 0.2em;
+    border-radius: 0.5em;
+}
+
+html {
+    font-size: 10px;
+}
+
+#ems li {
+    font-size: 1.5em;
+}
+
+#rems li {
+    font-size: 1.5rem;
+}
