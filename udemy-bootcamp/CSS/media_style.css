@@ -1,0 +1,10 @@
+/* media queries --> display a certain format if the screen size meets some specifications */
+    /* width --> screen is exactly __px */
+    /* min-width --> screen is at least __px */
+    /* max-width --> screen is at most __px */
+    /* resolution; line-height; font-size etc. */
+@media (min-width: 600px) and (max-width: 800px) {
+    h1 {
+        color: purple;
+    }
+}

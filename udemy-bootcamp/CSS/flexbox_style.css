@@ -1,0 +1,98 @@
+/* The flex model */
+    /* Main axis --> horizontal axis */
+    /* Cross axis --> vertical axis */
+/* flex-direction --> change main axis direction */
+    /* row --> left to right (default) */
+    /* row-reverse --> right to left */
+    /* column --> top to borrom */
+    /* column-reverse --> bottom to top */
+/* elements are their specified dimensions unless their container is too small */
+
+/* justify-content --> how the element is distributed across the main axis */   
+    /* flex-start --> from the start of the main flex axis */
+    /* flex-end --> from the end of the main flex axis */
+    /* center */
+    /* space-between --> distribute blank space between boxes (but not on outside) */
+    /* space-around --> distribute blank space both between boxes and around outside */
+    /* space-evenly --> evenly spaced between each element and on the outsides */
+
+/* flex-wrap --> whether elements wrap around the line to the next line(s) */
+    /* wrap --> cross axis goes left to right (if main vertical) */
+    /* wrap-reverse --> cross axis goes right to left (if main vertical) */
+
+/* align-items --> distribute items along the cross axis */
+    /* direction depends on wrap & wrap-reverse */
+    /* flex-start --> along the beginning of the cross axis */
+        /* ex. distributed evenly left to right, but justified to top */
+    /* center --> center of the cross axis */
+    /* baseline --> not aligned to the container but to elements inside the div */
+        /* ex. all bottoms of text line ups */
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: baseline;
+}
+
+#container div {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: 4em;
+}
+
+/* align-content --> controls spacing only when wrapped (or wrap-reversed) */
+    /* ex. when flex-direction = column, controls the space between columns */
+    /* same attribute choices as justify-content */
+
+/* align-self --> applied not to the flex container itself, but to individual elements*/
+    /* position things one at a time */
+    /* only when align-content is inactive */
+#container2 {
+    background-color: #005049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #005049;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    /* align-content: center; */
+}
+
+#container2 div {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    font-size: 4em;
+    /* flex-basis: 400px; */
+}
+
+#container2 div:nth-child(1) {
+    /* align-self: center; */
+    flex-grow: 1;
+    flex-shrink: 3;
+}
+
+#container2 div:nth-child(5) {
+    /* align-self: center; */
+    flex-grow: 3;
+    flex-shrink: 0;
+}
+
+/* flex-basis --> defines the initial size of an element before additional space is distributed (along main axis) */
+/* flex-grow --> controls the amount of available space an element should take up */
+    /* grows proportional to a unit-less number */
+    /* if 0, doesn't grow/shrink at all */
+/* flex-shrink --> if items are larger than the container, they shrink */
+    /* shrinks proportional to a unit-less number */
+/* use min-width and max-width to prevent resizing too much */
+/* flex --> flex-grow | flex-shrink | flex-basis */
