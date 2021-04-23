@@ -67,3 +67,5 @@ const li = document.querySelector('li')
 li.parentElement.removeChild(li)
 
 // remove --> removes the node itself
+const img2 = document.querySelector('img')
+img2.remove()
